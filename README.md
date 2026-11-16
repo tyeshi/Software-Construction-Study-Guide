@@ -41,59 +41,6 @@ Open **http://127.0.0.1:8000**. Keep the terminal running while studying. Press 
 
 Your friends cannot access your computer using this localhost address. Share a hosted URL using the next section, or have them download their own copy.
 
-## Host on GitHub Pages
-
-This is a static website: GitHub Pages can serve the HTML, CSS, JavaScript and PDFs.
-
-### Prepare the publishing folder
-
-If `index.html`, `style.css`, `sessions.js`, `app.js` and `resources/` are at the repository root, use **/(root)** as the publishing folder.
-
-If those files are inside `dist/`, copy them into a `docs/` folder from the repository root:
-
-```bash
-mkdir -p docs
-cp -R dist/. docs/
-git add docs
-git commit -m "Prepare study guide for GitHub Pages"
-git push
-```
-
-Use **/docs** as the publishing folder. Repeat the copy and commit after changing files in `dist/` so the hosted version receives your updates. The commands above work in macOS/Linux terminals and Git Bash on Windows.
-
-### Enable publishing
-
-1. Push your repository to GitHub.
-2. Open the repository's **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Choose **main** and the publishing folder you prepared: **/(root)** or **/docs**.
-5. Click **Save**, wait for deployment, and use the URL shown on that page.
-
-A typical project URL is `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/`.
-
-GitHub Free supports Pages from public repositories; private-repository support depends on your plan. A standard Pages site is public even when its source repository is private, so publish only material you intend to share.
-
-See [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for the current options.
-
-## Edit the guide
-
-| File | Purpose |
-| --- | --- |
-| `index.html` | Page structure |
-| `style.css` | Appearance and responsive layout |
-| `sessions.js` | Sessions, checklists, durations, references and links |
-| `app.js` | Navigation, completion rules, saved progress and notes |
-| `resources/` | PDF guide, practice papers and solution sheets |
-
-Edit a file, save it, and refresh your local browser. Keep session IDs stable if you want existing progress to remain associated with the same sessions. Publish changes with:
-
-```bash
-git add README.md index.html style.css sessions.js app.js resources
-git commit -m "Update study guide"
-git push
-```
-
-Those paths assume the website is at the repository root. For a `dist/` layout, stage `dist` instead and update `docs/` if you host from that copy. Review `git status` before committing.
 
 ## Troubleshooting
 
