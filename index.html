@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#244e46">
+<meta name="description" content="Nine guided Software Construction study sessions, with checklists, saved progress and practice papers. Two hours per week through 16 December 2026.">
+<title>SoCo · Your study sessions</title>
+<link rel="stylesheet" href="style.css?v=2">
+<script src="sessions.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#session-title">Skip to this session</a>
+<header class="topbar">
+  <a class="brand" href="#" id="home"><span class="brand-mark" aria-hidden="true">S<span>c</span></span><span>Software Construction<small>YOUR EXAM STUDY PLAN</small></span></a>
+  <button class="resource-button" id="open-resources" aria-label="Papers & resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-2H4zM20 4h-4a3 3 0 0 0-3 3v14a4 4 0 0 1 4-2h3z"/></svg><span>Papers & resources</span></button>
+</header>
+<div class="layout">
+<aside class="sidebar" aria-label="Study session navigation">
+  <div class="plan-heading"><p class="eyebrow">YOUR ROUTE TO EXAM DAY</p><h1>One session<br>at a time.</h1><p class="intro">Tick off the steps.<br>Then move to the next session.</p></div>
+  <div class="overall"><div><strong id="overall-count">0 of 9 sessions</strong><span id="overall-percent">0%</span></div><progress id="overall-progress" max="9" value="0" aria-label="Completed study sessions"></progress><p>2 hours / week · 9 hours total</p></div>
+  <nav id="session-nav" aria-label="All sessions"></nav>
+  <div class="exam-card"><span class="exam-icon" aria-hidden="true">16</span><div><span class="eyebrow">EXAM DAY</span><strong>Wednesday, 16 December</strong><small>2026 · 13:30–15:00 · Zurich time</small></div></div>
+</aside>
+<main id="main">
+  <div class="main-heading"><div><p class="eyebrow" id="session-position"></p><p class="week-dates" id="week-dates"></p></div><span class="save-state" id="save-state"><span aria-hidden="true">✓</span> Saved on this browser</span></div>
+  <section class="session-card" aria-labelledby="session-title">
+    <div class="session-top"><span class="session-category" id="session-category"></span><div class="session-meta" id="session-meta"></div></div>
+    <h2 id="session-title" tabindex="-1"></h2>
+    <p class="session-description" id="session-description"></p>
+    <div class="checklist-heading"><h3>Your checklist</h3><span id="task-count"></span></div>
+    <div class="checklist-track" aria-hidden="true"><span id="task-progress"></span></div>
+    <div id="task-list"></div>
+    <div class="exit-check"><span aria-hidden="true">↗</span><div><h3>Before you move on</h3><p id="exit-check"></p></div></div>
+    <details class="reference" id="reference"><summary>Quick reference for this session <span aria-hidden="true">+</span></summary><div id="reference-content"></div></details>
+    <details class="notes-panel"><summary>My notes & corrections <span aria-hidden="true">+</span></summary><label for="notes">One useful line: mistaken rule → corrected rule → next check.</label><textarea id="notes" rows="3" placeholder="What will you remember next time?"></textarea></details>
+    <div class="session-footer"><button class="back-button" id="previous"><span aria-hidden="true">←</span> Previous</button><div class="next-area"><span id="next-hint"></span><button class="next-button" id="next">Next session <span aria-hidden="true">→</span></button></div></div>
+  </section>
+  <section class="finish-card" id="finish" hidden><span class="finish-mark" aria-hidden="true">✓</span><p class="eyebrow">ALL NINE SESSIONS COMPLETE</p><h2>You’ve worked through the plan.</h2><p>Your checklists and notes are saved here. Revisit a session whenever you want to reinforce a topic.</p><p class="finish-exam">Exam · 16 December 2026 · 13:30–15:00</p><button class="next-button" id="review">Review my sessions <span aria-hidden="true">→</span></button></section>
+  <p class="page-footnote">Based on your course schedule, learning goals and supplied exam papers. Start with A and B; save C for your timed rehearsal.</p>
+</main>
+</div>
+<dialog id="resources-dialog" aria-labelledby="resources-title"><div class="dialog-heading"><div><p class="eyebrow">EVERYTHING IN ONE PLACE</p><h2 id="resources-title">Papers & resources</h2></div><button class="close-button" id="close-resources" aria-label="Close resources">×</button></div><p class="dialog-intro">Open a question paper while you study. Keep the solution sheet closed until you’ve committed to an answer.</p><div id="resource-list"></div><div class="resource-note"><strong>About your progress</strong><p>Ticks, notes and your current session are saved in this browser on this device. Use the same browser to resume. Clearing its site data removes this progress.</p></div></dialog>
+<div class="sr-only" role="status" id="announcer" aria-live="polite"></div>
+<noscript><p class="no-script">Enable JavaScript to use the checklist. You can also <a href="resources/SoCo_Study_Guide_HS26.pdf">open the PDF study guide</a>.</p></noscript>
+</body>
+</html>
